@@ -1,0 +1,115 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in-delay {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.8s ease-out;
+}
+
+.animate-fade-in-delay {
+  animation: fade-in-delay 0.8s ease-out 0.2s both;
+}
+
+.animate-fade-in-delay-2 {
+  animation: fade-in-delay 0.8s ease-out 0.4s both;
+}
+
+.animate-fade-in-delay-3 {
+  animation: fade-in-delay 0.8s ease-out 0.6s both;
+}
+
+.animate-fade-in-delay-4 {
+  animation: fade-in-delay 0.8s ease-out 0.8s both;
+}
+
+.animate-fade-in-delay-5 {
+  animation: fade-in-delay 0.8s ease-out 1.0s both;
+}
+
+.animate-fade-in-delay-6 {
+  animation: fade-in-delay 0.8s ease-out 1.2s both;
+}
+
+.animate-fade-in-delay-7 {
+  animation: fade-in-delay 0.8s ease-out 1.4s both;
+}
+
+.animate-spin-slow {
+  animation: spin-slow 3s linear infinite;
+}
+
+/* Smooth transitions for all interactive elements */
+* {
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #fef7ed;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #fed7aa;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #fdba74;
+}
+
+/* Focus styles for accessibility */
+input:focus, button:focus {
+  outline: 2px solid #f59e0b;
+  outline-offset: 2px;
+}
+
+/* Ensure text remains readable during web font loads */
+body {
+  font-display: swap;
+  background: linear-gradient(135deg, #fef7ed 0%, #fed7aa 100%);
+}
+
+/* Custom gradient colors for bronze, silver, gold */
+.from-bronze-400 { --tw-gradient-from: #cd7f32; }
+.to-bronze-600 { --tw-gradient-to: #8b4513; }
+.from-silver-400 { --tw-gradient-from: #c0c0c0; }
+.to-silver-600 { --tw-gradient-to: #808080; }
+.from-gold-400 { --tw-gradient-from: #ffd700; }
+.to-gold-600 { --tw-gradient-to: #b8860b; }
